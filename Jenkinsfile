@@ -14,13 +14,13 @@ pipeline {
             steps {
                 echo 'Building the application...'
                 // For Python, build might just be setting up environment or checking syntax
-                sh 'python -m py_compile app.py'
+                bat 'python -m py_compile app.py'
             }
         }
         stage('Test') {
             steps {
                 echo 'Running unit tests...'
-                sh 'python test_app.py'
+                bat 'python test_app.py'
             }
         }
     }
